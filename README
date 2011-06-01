@@ -1,0 +1,25 @@
+This is a simple OAuth 1 client library. You must have an existing access token to use it—it doesn't
+(yet?) handle the authorization phase, because I didn't need that for my larger project. Here's a
+simple example:
+
+package main
+
+import (
+  "http"
+  "oauth1"
+)
+
+func main() {
+  client := new(http.Client)
+  token := oauth1.NewAccessToken("consumer key", "consumer secret", "token", "token secret")
+
+  request, err := http.NewRequest("GET", "https://api.twitter.com/1/statuses/home_timeline.json", nil)
+  if err == nil {
+    token.SignRequestQuery(request)
+    response, err := client.Do(request)
+
+…and so on. SignRequestQuery adds the OAuth parameters to the query component of the request URL.
+If you'd prefer to use an Authorization header instead, use SignRequestHeader.
+
+Finally, I should note that this is my first real Go code. There are undoubtedly mistakes and
+inefficiencies. :)
