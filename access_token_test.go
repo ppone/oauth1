@@ -42,15 +42,15 @@ func TestSignRequestHeader(t *testing.T) {
 		keyValue := strings.Split(pair, "=", 2)
 		switch keyValue[0] {
 		case "oauth_consumer_key":
-			assertEqual("abcd", keyValue[1], t)
+			assertEqual("\"abcd\"", keyValue[1], t)
 		case "oauth_signature_method":
-			assertEqual("HMAC-SHA1", keyValue[1], t)
+			assertEqual("\"HMAC-SHA1\"", keyValue[1], t)
 		case "oauth_timestamp":
-			assertEqual(strconv.Itoa64(time.Seconds()), keyValue[1], t)
+			assertEqual("\"" + strconv.Itoa64(time.Seconds()) + "\"", keyValue[1], t)
 		case "oauth_token":
-			assertEqual("ijkl", keyValue[1], t)
+			assertEqual("\"ijkl\"", keyValue[1], t)
 		case "oauth_nonce":
-			assertEqual("6162636465666768696a6b6c6d6e6f70", keyValue[1], t)
+			assertEqual("\"6162636465666768696a6b6c6d6e6f70\"", keyValue[1], t)
 		// FIXME: can't verify oauth_signature without being able to mock out the timestamp.
 		}
 	}
