@@ -1,9 +1,9 @@
 package oauth1
 
 /*
+@author: Dana McCallum
 @author: Parag Patel
 
-This code is heavily based on https://github.com/DanaDanger/oauth1
 
 It uses the escape and isEscapable function that are taken from https://github.com/mrjones/oauth/blob/master/oauth.go
 
