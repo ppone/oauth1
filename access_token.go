@@ -1,10 +1,7 @@
 package oauth1
 
 /*
-
-	It uses the escape and isEscapable function that are taken from https://github.com/mrjones/oauth/blob/master/oauth.go
-
-
+It uses the escape and isEscapable function that are taken from https://github.com/mrjones/oauth/blob/master/oauth.go
 */
 
 import (
