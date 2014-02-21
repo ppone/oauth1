@@ -4,8 +4,6 @@ TODO: The unit tests at access_token_test.go need to be redone, though they are 
 
 Go Verison Supported: 1.2+.  You can install the package locally if you prefer not to import the github by using goimport (https://github.com/ppone/goimport), a python utilty to install your local go package code.
 
-
-
 Example
 ================================
 
@@ -63,6 +61,9 @@ func main() {
 	}
 	
 ```
+
+License
+=============================
 
 The MIT License (MIT)
 
