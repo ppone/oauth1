@@ -1,6 +1,4 @@
-This is a simple OAuth 1 client library. It does not handle the authorization phase.  At a minimum you need the consumer key and consumer secret.
-
-This code adds a authentication header to your requests.   It will not pull tokens from the server.   You need at a minimum a consumer key and consumer secret.
+This is a simple OAuth 1 client library. It does not handle the authorization phase.  At a minimum you need the consumer key and consumer secret.  This code adds a authentication header to your requests.   It will not pull tokens from the server.   You need at a minimum a consumer key and consumer secret.
 
 TODO: The unit tests at access_token_test.go need to be redone, though they are all passing currently
 
@@ -66,5 +64,25 @@ func main() {
 	
 ```
 
+The MIT License (MIT)
 
+Copyright (c) 2014 Parag Patel, Dana McCallum
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
 
