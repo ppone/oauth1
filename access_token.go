@@ -2,6 +2,7 @@ package oauth1
 
 /*
 
+	It uses the escape and isEscapable function that are taken from https://github.com/mrjones/oauth/blob/master/oauth.go
 
 	token := oauth1.NewAccessToken("consumer_Key", "consumer_secret", "", "")
 	urlstring := EncodeURLParameters("http://api.v3.factual.com/t/restaurants-us?q=Coffee,\"Los Angeles\"&limit=1")
