@@ -56,9 +56,6 @@ func NewAccessToken(consumerKey, consumerSecret, token, secret string) *AccessTo
 
 // Signs an HTTP request. The authorization is set in the Authorization header.
 func (t AccessToken) SignRequestHeader(request *http.Request) {
-	fmt.Println("DEBUGGING OAUTH1 v4")
-	fmt.Println(escape("http://api.v3.factual.com/t/restaurants-us?geo={\"$circle\":{\"$center\":[34.06021,-118.41828],\"$meters\": 5000}})"))
-	fmt.Println(url.QueryUnescape("http://api.v3.factual.com/t/restaurants-us?geo={\"$circle\":{\"$center\":[34.06021,-118.41828],\"$meters\": 5000}})"))
 	params := t.signedQueryMap(request)
 	header := "OAuth realm=\"\""
 	for k, v := range params {
