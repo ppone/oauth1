@@ -4,33 +4,6 @@ package oauth1
 
 	It uses the escape and isEscapable function that are taken from https://github.com/mrjones/oauth/blob/master/oauth.go
 
-	token := oauth1.NewAccessToken("consumer_Key", "consumer_secret", "", "")
-	urlstring := EncodeURLParameters("http://api.v3.factual.com/t/restaurants-us?q=Coffee,\"Los Angeles\"&limit=1")
-	request, err := http.NewRequest("GET", urlstring, nil)
-	client := &http.Client{}
-
-	if err != nil {
-		fmt.Println("ERROR: ", err)
-	}
-
-	token.SignRequestHeader(request)
-
-	result, err := client.Do(request)
-
-	if err != nil {
-		fmt.Println("ERROR: ", err)
-	}
-
-	content, err := ioutil.ReadAll(result.Body)
-
-	defer result.Body.Close()
-
-	if err != nil {
-		fmt.Println("ERROR: ", err)
-	}
-
-	fmt.Println(content)
-
 
 */
 
@@ -50,6 +23,8 @@ import (
 	"time"
 )
 
+//Need to use a custom escape function, currently Go does not have any offical packages that can escape url based on the
+//requirements for the Oauth spec
 func escape(s string) string {
 	t := make([]byte, 0, 3*len(s))
 	for i := 0; i < len(s); i++ {
