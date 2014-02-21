@@ -2,7 +2,7 @@ This is a simple OAuth 1 client library. It does not handle the authorization ph
 
 TODO: The unit tests at access_token_test.go need to be redone, though they are all passing currently
 
-Go Verison Supported: 1.2+.  You can install the package locally if you prefer not to import the github by using goimport (https://github.com/ppone/goimport), a python utilty to install you local go package code.
+Go Verison Supported: 1.2+.  You can install the package locally if you prefer not to import the github by using goimport (https://github.com/ppone/goimport), a python utilty to install your local go package code.
 
 
 
