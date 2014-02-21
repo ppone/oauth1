@@ -5,4 +5,4 @@ GOFILES=access_token.go
 
 include $(GOROOT)/src/Make.pkg
 
-m
+
